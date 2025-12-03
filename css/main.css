@@ -1,0 +1,167 @@
+/* BASIC PAGE SETUP */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f3e8;
+  color: #234126;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  font-size: 18px;
+}
+
+.brand img{
+    width: 140px;
+  height: auto;
+}
+
+.main-nav a {
+  display: inline-block; 
+  margin-left: 24px;
+  text-decoration: none;
+  color: #234126;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -100px;
+}
+
+.hero-welcome {
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+  color: #505050;
+}
+
+.hero-title {
+text-align: center;
+  margin: 8px 0 12px;
+  font-size: 100px;
+  color: #113F07;
+}
+
+.hero-desc {
+text-align: center;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  color: #000000;
+}
+
+.hero-image img {
+  max-width: 490px;
+  margin-top: 160px; 
+}
+
+
+/* GREEN BOTTOM SECTION */
+.bottom-section {
+  background-color: #113F07;
+  color: #ffffff;
+  border-radius: 40px 40px 0 0;
+  padding: 100px 120px;
+  margin: 0 auto;
+}
+
+/* ABOUT US */
+.about-us h2,
+.goals h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.about-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-layout p {
+    max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Placeholder box on the right */
+.about-image-placeholder {
+  width: 250px;
+  height: 280px;
+  background-color: #d9d9d9;
+  border: 2px solid #c0c0c0;
+}
+
+/* GOALS */
+.goals {
+  margin-top: 40px;
+}
+
+.goals-lists {
+display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.goals ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.goals li {
+  margin-bottom: 10px;
+}
+
+/* SIMPLE RESPONSIVE ADJUSTMENT */
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-image-placeholder {
+    margin: 0 auto;
+  }
+
+  .goals-lists {
+    flex-direction: column;
+    align-items: center;
+  }
+}
