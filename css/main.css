@@ -76,9 +76,14 @@ text-align: center;
   color: #000000;
 }
 
+.hero-image{
+    max-width: 490px;
+    max-height: auto;
+    margin-top: 95px; 
+}
+
 .hero-image img {
   max-width: 490px;
-  margin-top: 160px; 
 }
 
 
