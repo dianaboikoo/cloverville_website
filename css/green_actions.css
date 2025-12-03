@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f3e8;
+  color: #234126;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 100px;
+  font-size: 18px;
+}
+
+.brand img{
+    width: 130px;
+  height: auto;
+}
+
+.main-nav a {
+  display: inline-block; 
+  margin-left: 24px;
+  text-decoration: none;
+  color: #234126;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav a.active {
+  font-weight: bold;
+}
+
+
+/* -------- GREEN ACTIONS PAGE ---------- */
+
+.green-page {
+  background-color: #f5f3e8;
+  min-height: 100vh;
+}
+
+.green-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #000000;
+}
+
+.points-summary {
+  margin: 0 100px 30px;
+  font-size: 18px;
+}
+
+.points-summary span {
+  font-weight: bold;
+}
+
+/* grid with 3 cards per row on big screens */
+.green-grid {
+  max-width: 1200px;
+  margin: 0 100px 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* individual card */
+.green-card {
+  background-color: #f5f3e8;
+  border: 2px solid #234126;
+  border-radius: 18px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.green-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.green-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* responsive: 2 columns then 1 column */
+@media (max-width: 1000px) {
+  .green-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .green-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,43 +14,43 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px;
+  padding: 16px 100px;
   font-size: 18px;
 }
 
 .brand img{
-    width: 140px;
+    width: 130px;
   height: auto;
 }
 
 .main-nav a {
-  display: inline-block;
+  display: inline-block; 
   margin-left: 24px;
-  padding: 6px 10px;
   text-decoration: none;
   color: #234126;
-}
-
-.main-nav a.active {
-  font-weight: bold;
 }
 
 .main-nav a:hover {
   text-decoration: underline;
 }
 
-/* PAGE TITLE */
+.main-nav a.active {
+  font-weight: bold;
+}
+
+/* Trade Offers page */
 .page-title {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 32px;
+  color: #000000;
 }
 
 /* TABLE SECTION */
 .table-section {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 100px;
 }
 
 /* TRADE TABLE */
@@ -99,7 +99,3 @@ body {
   border-radius: 12px;
 }
 
-/* optional: a little space around whole table */
-.table-section {
-  padding: 20px 40px 80px;
-}
