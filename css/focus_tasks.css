@@ -9,37 +9,47 @@ body {
   color: #234126;
 }
 
-/* TOP BAR */
 .top-bar {
+  background-color: #f5f3e8;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 100px;
-  font-size: 18px;
+  flex-wrap: wrap;
 }
 
-.brand img{
-  width: 130px;
+.brand img {
+  width: 120px;
   height: auto;
 }
 
+.main-nav {
+  overflow: hidden;
+}
+
 .main-nav a {
-  display: inline-block; 
-  margin-left: 24px;
-  text-decoration: none;
+  float: left;
+  display: block;
   color: #234126;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .main-nav a:hover {
-  text-decoration: underline;
+  background-color: #ddd;
+  color: black;
 }
 
 .main-nav a.active {
-  font-weight: bold;
+  background-color: #234126;
+  color: white;
 }
 
-
-/* -- Focus tasks page-- */
+.main-nav .icon {
+  display: none;
+}
 
 .focus-page {
   background-color: #f5f3e8;
@@ -54,7 +64,6 @@ body {
   color: #000000;
 }
 
-/* grid with 3 cards per row on big screens */
 .task-grid {
   max-width: 1200px;
   margin: 0 auto 60px;
@@ -63,7 +72,6 @@ body {
   gap: 30px;
 }
 
-/* individual card */
 .task-card {
   background-color: #f5f3e8;
   border: 2px solid #234126;
@@ -93,7 +101,6 @@ body {
   line-height: 1.5;
 }
 
-/* responsive: 2 columns then 1 column */
 @media (max-width: 1000px) {
   .task-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -103,5 +110,36 @@ body {
 @media (max-width: 650px) {
   .task-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-nav a:not(:first-child) {
+    display: none;
+  }
+
+  .main-nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-nav.responsive {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .main-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .main-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
