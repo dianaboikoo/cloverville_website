@@ -50,7 +50,7 @@ body {
 /* TABLE SECTION */
 .table-section {
   max-width: 1200px;
-  margin: 0 100px;
+  margin: 0 auto 60px;
 }
 
 /* TRADE TABLE */
@@ -59,7 +59,7 @@ body {
   border: 2px solid #1f4f2b;
   border-radius: 12px;
   border-collapse: separate; 
-  overflow: hidden;          /* keeps rounded corners */
+  overflow: hidden;         
   background-color: #f5f3e8;
   border-spacing: 0px;
 }
