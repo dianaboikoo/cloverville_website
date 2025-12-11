@@ -19,8 +19,8 @@ body {
   font-size: 18px;
 }
 
-.brand img{
-    width: 130px;
+.brand img {
+  width: 130px;
   height: auto;
 }
 
@@ -41,11 +41,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px auto;
+  margin: 0 auto;
   max-width: 1200px;
   padding: 0 40px;
 }
-
 
 .hero-text {
   max-width: 500px;
@@ -62,32 +61,31 @@ body {
 }
 
 .hero-title {
-text-align: center;
+  text-align: center;
   margin: 8px 0 12px;
   font-size: 100px;
   color: #113F07;
 }
 
 .hero-desc {
-text-align: center;
+  text-align: center;
   margin: 0;
   line-height: 1.5;
   font-size: 20px;
   color: #000000;
 }
 
-.hero-image{
-    max-width: 490px;
-    max-height: auto;
-    margin-top: 95px; 
+.hero-image {
+  max-width: 490px;
+  height: auto;
+  margin-top: 95px; 
 }
 
 .hero-image img {
-  max-width: 490px;
+  max-width: 100%;
 }
 
-
-/* GREEN BOTTOM SECTION */
+/* GREEN BOTTOM SECTION (About Us + Goals + Developers) */
 .bottom-section {
   background-color: #113F07;
   color: #ffffff;
@@ -96,9 +94,10 @@ text-align: center;
   margin: 0 auto;
 }
 
-/* ABOUT US */
+/* ABOUT US & GOALS HEADERS */
 .about-us h2,
-.goals h2 {
+.goals h2,
+.developers-container h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 32px;
@@ -111,12 +110,12 @@ text-align: center;
 }
 
 .about-layout p {
-    max-width: 600px;
+  max-width: 600px;
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* Placeholder box on the right */
+/* Placeholder box */
 .about-image-placeholder {
   width: 250px;
   height: 280px;
@@ -124,13 +123,13 @@ text-align: center;
   border: 2px solid #c0c0c0;
 }
 
-/* GOALS */
+/* GOALS LISTS */
 .goals {
   margin-top: 40px;
 }
 
 .goals-lists {
-display: flex;
+  display: flex;
   justify-content: space-between;
   gap: 40px;
   font-size: 18px;
@@ -146,19 +145,82 @@ display: flex;
   margin-bottom: 10px;
 }
 
-/* SIMPLE RESPONSIVE ADJUSTMENT */
+/* --- DEVELOPERS SECTION --- */
+.developers-container {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255, 0.3); 
+  text-align: center;
+}
+
+.developers-container p {
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.dev-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px; 
+  flex-wrap: wrap;
+}
+
+.dev-card {
+  text-align: center;
+  width: 150px;
+}
+
+.dev-photo {
+  width: 100px;      
+  height: 100px;
+  border-radius: 50%; 
+  object-fit: cover;  
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+}
+
+.dev-card h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.dev-email {
+  font-size: 14px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.dev-email:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* RESPONSIVE ADJUSTMENT */
 @media (max-width: 800px) {
   .hero {
     flex-direction: column;
     text-align: center;
+    height: auto;
+    padding-bottom: 40px;
   }
 
   .hero-text {
+    margin-top: 40px;
     margin-bottom: 30px;
+  }
+
+  .hero-image {
+      margin-top: 20px;
+  }
+
+  .bottom-section {
+      padding: 60px 40px;
   }
 
   .about-layout {
     flex-direction: column;
+    align-items: center;
   }
 
   .about-image-placeholder {
@@ -168,5 +230,11 @@ display: flex;
   .goals-lists {
     flex-direction: column;
     align-items: center;
+  }
+  
+  .dev-grid {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
   }
 }
