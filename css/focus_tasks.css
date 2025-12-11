@@ -57,7 +57,7 @@ body {
 /* grid with 3 cards per row on big screens */
 .task-grid {
   max-width: 1200px;
-  margin: 0 100px;
+  margin: 0 auto 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
