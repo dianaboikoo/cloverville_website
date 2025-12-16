@@ -27,94 +27,54 @@
     <h1 class="green-title">History of Green Actions</h1>
 
     <p class="points-summary">
-      Total Green Points: <span>670 points</span>
+      Total Green Points: <span id="totalGreenPoints">0 points</span>
     </p>
 
-    <section class="green-grid">
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="green-card">
-        <h2>Green Action name</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
+    <section class="green-grid" id="greenGrid">
+      <!-- JS will inject all green actions here -->
     </section>
   </main>
+
+  <script>
+    async function loadGreenActions() {
+      try {
+        const response = await fetch("cloverville_export.json");
+        const data = await response.json();
+
+        const grid = document.getElementById("greenGrid");
+        const totalPointsElement = document.getElementById("totalGreenPoints");
+
+        grid.innerHTML = ""; // Clear placeholder cards
+
+        let totalPoints = 0;
+
+        // Loop through green actions
+        data.greenActions.forEach(action => {
+
+          // Add up total green points
+          totalPoints += action.greenPoints;
+
+          const card = document.createElement("article");
+          card.classList.add("green-card");
+
+          card.innerHTML = `
+            <h2>${action.name}</h2>
+            <p>+${action.greenPoints} green points</p>
+          `;
+
+          grid.appendChild(card);
+        });
+
+        // Update total green points display
+        totalPointsElement.textContent = totalPoints + " points";
+
+      } catch (error) {
+        console.error("Error loading green actions:", error);
+      }
+    }
+
+    loadGreenActions();
+  </script>
 
 </body>
 </html>

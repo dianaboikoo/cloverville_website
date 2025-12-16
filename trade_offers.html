@@ -31,35 +31,52 @@
           <tr>
             <th class="owner-col">Owner</th>
             <th>Trade Offer</th>
-            <th>Exchange for<br>(points or servise)</th>
+            <th>Exchange for<br>(points or service)</th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td class="owner-name">Labubu</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-          </tr>
-          <tr>
-            <td class="owner-name">Labubu</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-          </tr>
-          <tr>
-            <td class="owner-name">Labubu</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-          </tr>
-          <tr>
-            <td class="owner-name">Labubu</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-            <td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</td>
-          </tr>
+        <tbody id="trade-body">
+          <!-- JS will insert rows here -->
         </tbody>
       </table>
     </section>
   </main>
+
+  <!-- JSON LOADING SCRIPT -->
+  <script>
+    async function loadTradeOffers() {
+      try {
+        const response = await fetch("cloverville_export.json");
+        if (!response.ok) {
+          console.error("Failed to load JSON file.");
+          return;
+        }
+
+        const data = await response.json();
+        const offers = data.tradeOffers || [];
+
+        const tbody = document.getElementById("trade-body");
+        tbody.innerHTML = ""; // Clear existing rows
+
+        offers.forEach(offer => {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+            <td class="owner-name">${offer.owner}</td>
+            <td>${offer.tradeOffer}</td>
+            <td>${offer.priceOrService}</td>
+          `;
+
+          tbody.appendChild(row);
+        });
+
+      } catch (error) {
+        console.error("Error loading trade offers:", error);
+      }
+    }
+
+    loadTradeOffers();
+  </script>
 
 </body>
 </html>

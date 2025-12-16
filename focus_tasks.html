@@ -22,70 +22,42 @@
   <main class="focus-page">
     <h1 class="focus-title">Focus Tasks</h1>
 
-    <section class="task-grid">
+    <section class="task-grid" id="taskGrid">
 
-      <article class="task-card">
-        <h2>Labubu labubu</h2>
-        <div class="task-points">+67 points</div>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="task-card">
-        <h2>Labubu labubu</h2>
-        <div class="task-points">+67 points</div>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="task-card">
-        <h2>Labubu labubu</h2>
-        <div class="task-points">+67 points</div>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="task-card">
-        <h2>Labubu labubu</h2>
-        <div class="task-points">+67 points</div>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="task-card">
-        <h2>Labubu labubu</h2>
-        <div class="task-points">+67 points</div>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
-
-      <article class="task-card">
-        <h2>Labubu labubu</h2>
-        <div class="task-points">+67 points</div>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto.
-        </p>
-      </article>
+      <!-- JS will populate with data from cloverville_export.json -->
 
     </section>
   </main>
+
+  <script>
+    async function loadTasks() {
+      try {
+        const response = await fetch("cloverville_export.json");
+        const data = await response.json();
+
+        const grid = document.getElementById("taskGrid");
+        grid.innerHTML = ""; // Clear existing placeholders
+
+        data.tasks.forEach(task => {
+          const card = document.createElement("article");
+          card.classList.add("task-card");
+
+          card.innerHTML = `
+            <h2>${task.name}</h2>
+            <div class="task-points">+${task.personalPoints} points</div>
+            <p>${task.description}</p>
+          `;
+
+          grid.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error("Error loading tasks:", err);
+      }
+    }
+
+    loadTasks();
+  </script>
 
 </body>
 </html>
