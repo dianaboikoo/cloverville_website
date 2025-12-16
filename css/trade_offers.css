@@ -9,36 +9,48 @@ body {
   color: #234126;
 }
 
-/* TOP BAR */
 .top-bar {
+  background-color: #f5f3e8;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 100px;
-  font-size: 18px;
+  flex-wrap: wrap;
 }
 
-.brand img{
-    width: 130px;
+.brand img {
+  width: 120px;
   height: auto;
 }
 
+.main-nav {
+  overflow: hidden;
+}
+
 .main-nav a {
-  display: inline-block; 
-  margin-left: 24px;
-  text-decoration: none;
+  float: left;
+  display: block;
   color: #234126;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .main-nav a:hover {
-  text-decoration: underline;
+  background-color: #ddd;
+  color: black;
 }
 
 .main-nav a.active {
-  font-weight: bold;
+  background-color: #234126;
+  color: white;
 }
 
-/* Trade Offers page */
+.main-nav .icon {
+  display: none;
+}
+
 .page-title {
   text-align: center;
   margin-top: 40px;
@@ -47,24 +59,21 @@ body {
   color: #000000;
 }
 
-/* TABLE SECTION */
 .table-section {
   max-width: 1200px;
-  margin: 0 100px;
+  margin: 0 auto 60px;
 }
 
-/* TRADE TABLE */
 .trade-table {
   width: 100%;
   border: 2px solid #1f4f2b;
   border-radius: 12px;
   border-collapse: separate; 
-  overflow: hidden;          /* keeps rounded corners */
+  overflow: hidden;         
   background-color: #f5f3e8;
   border-spacing: 0px;
 }
 
-/* HEADER ROW */
 .trade-table thead th {
   padding: 16px;
   border-bottom: 2px solid #1f4f2b;
@@ -76,26 +85,52 @@ body {
   width: 18%;
 }
 
-/* BODY ROWS */
 .trade-table tbody td {
   padding: 14px 18px;
   font-size: 14px;
   vertical-align: top;
 }
 
-/* vertical column lines */
 .trade-table th + th,
 .trade-table td + td {
   border-left: 2px solid #1f4f2b;
 }
 
-/* owner column text */
 .owner-name {
   font-weight: bold;
 }
 
-/* outer rounded corners effect */
 .trade-table {
   border-radius: 12px;
 }
 
+@media screen and (max-width: 800px) {
+  .main-nav a:not(:first-child) {
+    display: none;
+  }
+
+  .main-nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-nav.responsive {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .main-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .main-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

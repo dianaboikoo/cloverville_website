@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <title>Cloverville – Focus Tasks</title>
   <link rel="stylesheet" href="css/focus_tasks.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <header class="top-bar">
-    <a href="index.html"><div class="brand"><img src="images/logo.png" alt="Cloverville logo"></div></a>
+    <a href="index.html" class="logo-link"><div class="brand"><img src="images/logo.png" alt="Cloverville logo"></div></a>
 
-    <nav class="main-nav">
-      <a href="trade_offers.html">Trade Offers</a>
-      <a href="focus_tasks.html" class="active">Focus Tasks</a>
-      <a href="green_actions.html">Green Actions</a>
-      <a href="index.html#aboutus">About us</a>
+    <nav class="main-nav" id="myTopnav">
+        <a href="trade_offers.html">Trade Offers</a>
+        <a href="focus_tasks.html" class="active">Focus Tasks</a>
+        <a href="green_actions.html">Green Actions</a>
+        <a href="index.html#history">History</a>
+        <a href="index.html#developers">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
   </header>
 
   <main class="focus-page">
     <h1 class="focus-title">Focus Tasks</h1>
 
+<<<<<<< HEAD
     <section class="task-grid" id="taskGrid">
 
       <!-- JS will populate with data from cloverville_export.json -->
@@ -60,4 +66,60 @@
   </script>
 
 </body>
+=======
+    <section class="task-grid" id="focus-task-list">
+
+      <article class="task-card">
+        <h2>Community Garden Weeding</h2>
+        <div class="task-points">+50 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Recycling Sort</h2>
+        <div class="task-points">+30 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Tool Repair Workshop</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Compost Turning</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Pathway Clearing</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Rainwater Barrel Check</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+  </body>
+>>>>>>> 5232ff08074d7c5c69de38c493e815972fef7e2d
 </html>

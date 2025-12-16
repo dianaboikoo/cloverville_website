@@ -21,35 +21,60 @@
       "taskName": "Mopy"
     }
   ],
-  "tradeOffers": [],
+  "tradeOffers": [
+    {
+      "owner": "Resident 1",
+      "priceOrService": "20",
+      "pointCost": 20,
+      "tradeOffer": "Labubus",
+      "status": "Unassigned"
+    },
+    {
+      "owner": "Resident 2",
+      "priceOrService": "dasd",
+      "tradeOffer": "sdad",
+      "status": "Unassigned"
+    }
+  ],
   "residents": [
     {
       "participationBoostPercent": 0,
       "personalPoints": 107,
-      "name": "Marcus",
+      "name": "Resident 1",
       "greenPoints": 0
     },
     {
       "participationBoostPercent": 10,
       "personalPoints": 42,
-      "name": "Maciej",
+      "name": "Resident 2",
       "greenPoints": 30
     },
     {
       "participationBoostPercent": 0,
       "personalPoints": 33,
-      "name": "Diana",
+      "name": "Resident 3",
       "greenPoints": 0
     },
     {
       "participationBoostPercent": 0,
       "personalPoints": 0,
-      "name": "Mimi",
+      "name": "Resident 4",
       "greenPoints": 0
     }
   ],
   "communityPool": 182,
-  "tasks": [],
+  "tasks": [
+    {
+      "personalPoints": 20,
+      "name": "Mopy",
+      "description": "do this do that"
+    },
+    {
+      "personalPoints": 100,
+      "name": "write all reports",
+      "description": "write all reports for the labubu gold pro max super extra limited edition"
+    }
+  ],
   "greenActions": [
     {
       "name": "Biked to uni",

@@ -4,24 +4,27 @@
   <meta charset="UTF-8">
   <title>Cloverville</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <header class="top-bar">
-    <a href="index.html"><div class="brand"><img src="images/logo.png" alt="Cloverville logo"></div></a>
+    <a href="index.html" class="logo-link"><div class="brand"><img src="images/logo.png" alt="Cloverville logo"></div></a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="myTopnav">
         <a href="trade_offers.html">Trade Offers</a>
         <a href="focus_tasks.html">Focus Tasks</a>
         <a href="green_actions.html">Green Actions</a>
-        <a href="#aboutus">About Us</a>
-
+        <a href="#history">History</a>
+        <a href="#developers">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
        
@@ -29,61 +32,94 @@
         <p class="hero-welcome">Welcome to</p>
         <h1 class="hero-title">Cloverville</h1>
         <p class="hero-desc">
-          Cloverville is a small ecological village where
-          residents live sustainably, grow their own food,
-          and share resources.
+          Cloverville is a small ecological village where residents live sustainably, 
+          grow their own food, and share resources.
         </p>
       </div>
-
       <div class="hero-image">
-        <img src="images/main_page_pic.png"
-             alt="Cloverville village illustration">
+        <img src="images/main_page_pic.png" alt="Cloverville Village">
       </div>
     </section>
 
-    <!-- GREEN BOTTOM SECTION -->
-    <section id="aboutus" class="bottom-section">
-      <div class="about-us">
-        <h2>About us</h2>
-
+    <section class="bottom-section">
+      
+      <div id="history" class="about-us">
+        <h2>Our Story</h2>
+        
         <div class="about-layout">
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit
-            voluptatem accusantium doloremque laudantium, totam
-            rem aperiam, eaque ipsa quae ab illo inventore veritatis
-            et quasi architecto beatae vitae dicta sunt explicabo.
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-            aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Sed ut
-            perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam.
-          </p>
-
-          <div class="about-image-placeholder"></div>
+            <div class="history-text">
+                <p>
+                    Cloverville started in 2015 as a bold experiment by Green Bob. 
+                    Tired of the hustle of big cities, he purchased an old farm and decided 
+                    to transform it into a self-sustaining paradise.
+                </p>
+                <p>
+                    The philosophy is simple: <strong>"Give back to nature more than you take."</strong> 
+                    Residents work together to build solar panels, plant community gardens, 
+                    and ensure everyone contributes fairly via the Green Points system.
+                </p>
+            </div>
+            
+            <div class="hero-image" style="margin-top: 0;">
+                 <video width="400" height="250" autoplay loop muted style>
+                      <source src="images/naturevideo.mp4" type="video/mp4">
+                      Video not supported
+                 </video>
+            </div>
         </div>
       </div>
 
-      <div class="goals">
-        <h2>Our Goals</h2>
+      <div class="about-us">
+        <h2>About Us & Goals</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+           We are a community of 42 residents dedicated to living in harmony with nature.
+           Our daily life revolves around shared responsibilities and green initiatives.
+        </p>
 
-        <div class="goals-lists">
-          <ul>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-          </ul>
-          <ul>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-            <li>Excepteur sint occaecat cupidatat non proident</li>
-          </ul>
+        <div class="goals">
+            <div class="goals-lists">
+              <ul>
+                <li>Reduce carbon footprint by 50%</li>
+                <li>Self-sufficiency in food production</li>
+              </ul>
+              <ul>
+                <li>Zero-waste community</li>
+                <li>Education and green workshops</li>
+              </ul>
+            </div>
         </div>
       </div>
+
+      <div class="developers-container" id="developers">
+        <h2>Meet the Developers</h2>
+        <p>The SEP1 Team behind the Cloverville project.</p>
+
+        <div class="dev-grid">
+            <div class="dev-card">
+                <img src="images/maciek.jpg" alt="Maciek" class="dev-photo"> 
+                <h3>Maciek</h3>
+                <a href="mailto:363666@via.dk" class="dev-email">Contact</a>
+            </div>
+            <div class="dev-card">
+                <img src="images/diana.jpg" alt="Diana" class="dev-photo">
+                <h3>Diana</h3>
+                <a href="mailto:360245@via.dk" class="dev-email">Contact</a>
+            </div>
+            <div class="dev-card">
+                <img src="images/marcus.jpg" alt="Marcus" class="dev-photo">
+                <h3>Marcus</h3>
+                <a href="mailto:361734@via.dk" class="dev-email">Contact</a>
+            </div>
+        </div>
+      </div>
+
     </section>
   </main>
 
+<<<<<<< HEAD
+=======
+  <script src="js/script.js"></script>
+>>>>>>> 5232ff08074d7c5c69de38c493e815972fef7e2d
 
 </body>
 </html>
