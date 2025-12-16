@@ -21,29 +21,7 @@
       "taskName": "Mopy"
     }
   ],
-  "tradeOffers": [
-    {
-      "owner": "Marcus",
-      "priceOrService": "20",
-      "pointCost": 20,
-      "tradeOffer": "Labubus",
-      "status": "Unassigned"
-    },
-    {
-      "owner": "Mimi",
-      "priceOrService": "0",
-      "pointCost": 0,
-      "tradeOffer": "blabla",
-      "status": "Unassigned"
-    },
-    {
-      "owner": "Marcus",
-      "priceOrService": "0",
-      "pointCost": 0,
-      "tradeOffer": "knkj",
-      "status": "Unassigned"
-    }
-  ],
+  "tradeOffers": [],
   "residents": [
     {
       "participationBoostPercent": 0,
@@ -71,18 +49,7 @@
     }
   ],
   "communityPool": 182,
-  "tasks": [
-    {
-      "personalPoints": 20,
-      "name": "Mopy",
-      "description": "do this do that"
-    },
-    {
-      "personalPoints": 100,
-      "name": "write all reports",
-      "description": "write all reports for the labubu gold pro max super extra limited edition"
-    }
-  ],
+  "tasks": [],
   "greenActions": [
     {
       "name": "Biked to uni",

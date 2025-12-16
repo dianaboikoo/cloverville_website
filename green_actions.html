@@ -22,7 +22,12 @@
       <a href="index.html#aboutus">About us</a>
     </nav>
   </header>
-
+    <div class="community-pool">
+         <p class="community-label">Community Pool</p>
+          <p class="community-value">
+          <span id="communityPoolValue">0</span> points
+            </p>
+      </div>
   <main class="green-page">
     <h1 class="green-title">History of Green Actions</h1>
 
@@ -74,6 +79,17 @@
     }
 
     loadGreenActions();
+     fetch("cloverville_export.json")
+    .then(response => response.json())
+    .then(data => {
+      if (data.communityPool !== undefined) {
+        document.getElementById("communityPoolValue").textContent =
+          data.communityPool;
+      }
+    })
+    .catch(error => {
+      console.error("Failed to load community pool:", error);
+    });
   </script>
 
 </body>

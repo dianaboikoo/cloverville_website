@@ -53,6 +53,28 @@ body {
   margin: 0 auto;
   margin-top: -100px;
 }
+.community-pool {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background-color: #e9f5ec;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.community-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f6f4e;
+  margin: 0;
+}
+
+.community-value {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f4f38;
+  margin: 4px 0 0 0;
+}
+
 
 .hero-welcome {
   text-align: center;
