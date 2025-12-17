@@ -1,57 +1,34 @@
 {
   "taskLog": [
     {
-      "residentName": "Marcus",
-      "taskName": "Mopy"
-    },
-    {
-      "residentName": "Diana",
-      "taskName": "write all reports"
-    },
-    {
-      "residentName": "Maciej",
-      "taskName": "Mopy"
-    },
-    {
-      "residentName": "Marcus",
-      "taskName": "Mopy"
-    },
-    {
-      "residentName": "Maciej",
-      "taskName": "Mopy"
+      "residentName": "Resident 2",
+      "taskName": "asda"
     }
   ],
   "tradeOffers": [
     {
-      "owner": "Resident 1",
-      "priceOrService": "20",
-      "pointCost": 20,
-      "tradeOffer": "Labubus",
-      "status": "Unassigned"
-    },
-    {
       "owner": "Resident 2",
       "priceOrService": "dasd",
-      "tradeOffer": "sdad",
+      "tradeOffer": "sss",
       "status": "Unassigned"
     }
   ],
   "residents": [
     {
       "participationBoostPercent": 0,
-      "personalPoints": 107,
+      "personalPoints": 0,
       "name": "Resident 1",
       "greenPoints": 0
     },
     {
       "participationBoostPercent": 10,
-      "personalPoints": 42,
+      "personalPoints": 22,
       "name": "Resident 2",
       "greenPoints": 30
     },
     {
       "participationBoostPercent": 0,
-      "personalPoints": 33,
+      "personalPoints": 0,
       "name": "Resident 3",
       "greenPoints": 0
     },
@@ -60,19 +37,20 @@
       "personalPoints": 0,
       "name": "Resident 4",
       "greenPoints": 0
+    },
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 0,
+      "name": "Resident 5",
+      "greenPoints": 0
     }
   ],
-  "communityPool": 182,
+  "communityPool": 386,
   "tasks": [
     {
       "personalPoints": 20,
-      "name": "Mopy",
-      "description": "do this do that"
-    },
-    {
-      "personalPoints": 100,
-      "name": "write all reports",
-      "description": "write all reports for the labubu gold pro max super extra limited edition"
+      "name": "asda",
+      "description": "sdas"
     }
   ],
   "greenActions": [
