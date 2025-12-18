@@ -17,7 +17,7 @@ async function loadGreenActions() {
     const totalPointsElement = document.getElementById("totalGreenPoints");
     const communityPoolValue = document.getElementById("communityPoolValue");
 
-    grid.innerHTML = "";
+    grid.innerHTML = ""; 
     let totalPoints = 0;
 
     data.greenActions.forEach(action => {
@@ -28,7 +28,7 @@ async function loadGreenActions() {
       card.innerHTML = `
         <h2>${action.name}</h2>
         <div class="green-points">+${action.greenPoints} points</div>
-        <p>${action.description || "No description provided."}</p>
+        <p>${action.description || ""}</p>
       `;
       grid.appendChild(card);
     });
@@ -47,7 +47,6 @@ async function loadGreenActions() {
 
 function updateRewards(currentPoints) {
   const rewardItems = document.querySelectorAll('.reward-item');
-
   rewardItems.forEach(item => {
     const threshold = parseInt(item.getAttribute('data-threshold'));
     const icon = item.querySelector('.reward-icon');
