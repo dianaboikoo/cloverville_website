@@ -6,10 +6,8 @@
   <link rel="stylesheet" href="css/green_actions.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
 
-  <!-- HEADER -->
   <header class="top-bar">
     <a href="index.html">
       <div class="brand">
@@ -26,7 +24,6 @@
     </nav>
   </header>
 
-  <!-- COMMUNITY POOL -->
   <div class="community-pool">
     <p class="community-label">Community Pool</p>
     <p class="community-value">
@@ -34,128 +31,40 @@
     </p>
   </div>
 
-  <!-- MAIN CONTENT -->
   <main class="green-page">
-
     <h1 class="green-title">History of Green Actions</h1>
 
     <p class="points-summary">
-      Total Green Points:
-      <span id="totalGreenPoints">0 points</span>
+      Total Green Points: <span id="totalGreenPoints">0 points</span>
     </p>
 
-    <!-- JS WILL INSERT GREEN ACTION CARDS HERE -->
-    <section class="green-grid" id="greenGrid"></section>
-
-    <!-- REWARDS -->
     <section class="rewards-section">
-      <div class="rewards-container">
-
-        <div class="reward-item unlocked">
-          <div class="reward-icon">🔓</div>
+      <div class="rewards-container" id="rewardsContainer">
+        <div class="reward-item" data-threshold="500">
+          <div class="reward-icon">🔒</div>
           <div class="reward-cost">500 pts</div>
           <h3>Flower Planting Party</h3>
         </div>
-    <section class="rewards-section">
-        
-        <div class="rewards-container" id="rewardsContainer">
-        <div class="reward-item" data-threshold="500">
-        <div class="reward-icon">🔒</div>
-        <div class="reward-cost">500 pts</div>
-        <h3>Flower Planting Party</h3>
-    </div>
 
-    <div class="reward-item" data-threshold="1000">
-        <div class="reward-icon">🔒</div>
-        <div class="reward-cost">1000 pts</div>
-        <h3>New Park Bench</h3>
-    </div>
-
-    <div class="reward-item" data-threshold="2000">
-        <div class="reward-icon">🔒</div>
-        <div class="reward-cost">2000 pts</div>
-        <h3>Village Pizza Festival</h3>
-    </div>
-</div>
-   <section class="green-grid">
-
-        <div class="reward-item locked">
+        <div class="reward-item" data-threshold="1000">
           <div class="reward-icon">🔒</div>
           <div class="reward-cost">1000 pts</div>
           <h3>New Park Bench</h3>
         </div>
 
-        <div class="reward-item locked">
+        <div class="reward-item" data-threshold="2000">
           <div class="reward-icon">🔒</div>
           <div class="reward-cost">2000 pts</div>
           <h3>Village Pizza Festival</h3>
         </div>
-
       </div>
     </section>
 
+    <section class="green-grid" id="greenGrid"></section>
+
   </main>
 
-  <!-- MAIN SCRIPT -->
   <script src="js/script.js"></script>
-
-  <!-- PAGE SCRIPT -->
-  <script>
-    async function loadGreenActions() {
-      try {
-        const response = await fetch("cloverville_export.json");
-        const data = await response.json();
-
-        const grid = document.getElementById("greenGrid");
-        const totalPointsElement = document.getElementById("totalGreenPoints");
-
-<<<<<<< HEAD
-        grid.innerHTML = "";
-        let totalPoints = 0;
-
-        data.greenActions.forEach(action => {
-=======
-        grid.innerHTML = ""; 
-
-        let totalPoints = 0;
-
-        data.greenActions.forEach(action => {
-
->>>>>>> 9c4bf8b97a1def20e374f9d117aee72a45e3063e
-          totalPoints += action.greenPoints;
-
-          const card = document.createElement("article");
-          card.className = "green-card";
-
-          card.innerHTML = `
-            <h2>${action.name}</h2>
-            <div class="green-points">+${action.greenPoints} points</div>
-          `;
-
-          grid.appendChild(card);
-        });
-
-        totalPointsElement.textContent = totalPoints + " points";
-
-      } catch (error) {
-        console.error("Error loading green actions:", error);
-      }
-    }
-
-    loadGreenActions();
-
-    fetch("cloverville_export.json")
-      .then(response => response.json())
-      .then(data => {
-        if (data.communityPool !== undefined) {
-          document.getElementById("communityPoolValue").textContent =
-            data.communityPool;
-        }
-      })
-      .catch(error => {
-        console.error("Failed to load community pool:", error);
-      });
-  </script>
 
 </body>
 </html>
