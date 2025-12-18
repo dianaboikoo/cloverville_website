@@ -36,32 +36,27 @@
       Total Green Points: <span id="totalGreenPoints">0 points</span>
     </p>
 
-    <section class="green-grid" id="greenGrid">
-      <!-- JS will inject all green actions here -->
-      Total Green Points: <span>670 points</span>
-    </p> 
-
     <section class="rewards-section">
         
-        <div class="rewards-container">
-            <div class="reward-item unlocked">
-                <div class="reward-icon">🔓</div>
-                <div class="reward-cost">500 pts</div>
-                <h3>Flower Planting Party</h3>
-            </div>
+        <div class="rewards-container" id="rewardsContainer">
+        <div class="reward-item" data-threshold="500">
+        <div class="reward-icon">🔒</div>
+        <div class="reward-cost">500 pts</div>
+        <h3>Flower Planting Party</h3>
+    </div>
 
-            <div class="reward-item locked">
-                <div class="reward-icon">🔒</div>
-                <div class="reward-cost">1000 pts</div>
-                <h3>New Park Bench</h3>
-            </div>
+    <div class="reward-item" data-threshold="1000">
+        <div class="reward-icon">🔒</div>
+        <div class="reward-cost">1000 pts</div>
+        <h3>New Park Bench</h3>
+    </div>
 
-            <div class="reward-item locked">
-                <div class="reward-icon">🔒</div>
-                <div class="reward-cost">2000 pts</div>
-                <h3>Village Pizza Festival</h3>
-            </div>
-        </div>
+    <div class="reward-item" data-threshold="2000">
+        <div class="reward-icon">🔒</div>
+        <div class="reward-cost">2000 pts</div>
+        <h3>Village Pizza Festival</h3>
+    </div>
+</div>
    <section class="green-grid">
 
       <article class="green-card">
@@ -168,14 +163,12 @@
         const grid = document.getElementById("greenGrid");
         const totalPointsElement = document.getElementById("totalGreenPoints");
 
-        grid.innerHTML = ""; // Clear placeholder cards
+        grid.innerHTML = ""; 
 
         let totalPoints = 0;
 
-        // Loop through green actions
         data.greenActions.forEach(action => {
 
-          // Add up total green points
           totalPoints += action.greenPoints;
 
           const card = document.createElement("article");
@@ -189,7 +182,6 @@
           grid.appendChild(card);
         });
 
-        // Update total green points display
         totalPointsElement.textContent = totalPoints + " points";
 
       } catch (error) {
